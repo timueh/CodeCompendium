@@ -4,20 +4,24 @@ function encode(input::String;N::Int=5)
         return s
     else
         # break into groups of size $N$ with trailing space
-        chunks = collect(m.match for m in eachmatch(Regex("(.{1,$N})"),s))
-        return join(map(mys->mys *= " ",chunks))[1:end-1]
+        # chunks = collect(m.match for m in eachmatch(Regex("(.{1,$N})"),s))
+        ls = length(s)
+        chunkrange = 1:N:ls
+        chunks = Vector{String}()
+        sizehint!(chunks, length(chunkrange))
+        for r in chunkrange
+            endr = min(r+N, ls+1) - 1
+            push!(chunks, s[r:endr])
+        end
+        return join(chunks, " ")
     end
 end
 
 # core function -- needs to be called for lowercase `c`
 function encode(c::Char)
-    if isspace(c) || ispunct(c)
-        return ""
-    elseif c in 'a' : 'z'
-        return Char( 'z' - (c - 'a') )
-    else
-        return c
-    end
+    isnumeric(c)    && return string(c)
+    c in 'a' : 'z'  && return string(Char( 'z' - (c - 'a') ))
+    return ""
 end
 
-decode(input::String) = join([encode(letter) for letter in lowercase(input)])
+decode(input::String) = join(encode(letter) for letter in lowercase(input))
