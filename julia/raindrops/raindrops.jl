@@ -1,9 +1,11 @@
 function raindrops(number::Int)
-    d = Dict(3=>"Pling",5=>"Plang",7=>"Plong")
+    t = [(3=>"Pling"),(5=>"Plang"),(7=>"Plong")]
+    # just in case:
+    # t = sort([(3=>"Pling"),(5=>"Plang"),(7=>"Plong")])
     s::String = ""
-    for digit in sort(collect(keys(d)))
+    for (digit,str) in t
         if number % digit == 0
-            s *= d[digit]
+            s *= str
         end
     end
     isempty(s) ? string(number) : s
