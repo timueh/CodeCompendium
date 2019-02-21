@@ -1,8 +1,11 @@
 function luhn(input::String)
     length(input) <= 1 && return false
-    clean = filter(!isspace,input)
-    filter(isletter,clean) |> length > 0 && return false
-    nums = parse(Int,clean) |> digits |> reverse
-    nums[1:2:end] = map(x->2x>9 ? 2x-9 : 2x,nums[1:2:end])
-    sum(nums) % 10 == 0
+    clean = filter(!isspace,input) |> reverse
+    s = 0
+    for (i,digit) in enumerate(clean)
+        isletter(digit) && return false
+        d = parse(Int,digit)
+        s += iseven(i) ? (2*d>9 ? 2*d-9 : 2*d) : d
+    end
+    s % 10 == 0
 end
