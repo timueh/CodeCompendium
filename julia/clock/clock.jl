@@ -1,4 +1,5 @@
 import Base: show, +, -, isequal
+import Dates
 
 struct Clock
     h::Integer
@@ -32,13 +33,13 @@ end
 
 function show(io::IO,c::Clock)
     h, m = map(x->0 <= x <= 9 ? "0"*string(x) : string(x), [c.h, c.m])
-    println(h*":"*m)
+    print(io, "\""* h*":"*m * "\"")
 end
 
-+(c::Clock,m::Integer) = Clock(c.h,c.m + m)
++(c::Clock,m::Dates.Minute) = Clock(c.h,c.m + m.value)
 +(c::Clock,(h,m)::Tuple{Integer,Integer}) = Clock(c.h + h,c.m + m)
 
--(c::Clock,m::Integer) = Clock(c.h,c.m - m)
+-(c::Clock,m::Dates.Minute) = Clock(c.h,c.m - m.value)
 -(c::Clock,(h,m)::Tuple{Integer,Integer}) = Clock(c.h - h,c.m - m)
 
 isequal(c1::Clock,c2::Clock) = c1.m == c2.m && c1.h == c2.h
