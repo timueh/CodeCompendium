@@ -5,3 +5,4 @@
 *.jl.mem
 deps/deps.jl
 *.pyc
+*.DS_Store
