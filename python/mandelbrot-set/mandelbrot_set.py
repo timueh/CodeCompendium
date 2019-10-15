@@ -50,5 +50,7 @@ for (x_, y_) in iter.product(xAxis, yAxis):
     z.append(findMandelbrotColor(MyComplex(x_, y_)))
 
 z = np.reshape(z, (len(xAxis), len(yAxis)))
-plt.imshow(z)
+z = np.transpose(z)
+plt.imshow(z, origin='lower', extent=[
+           xAxis.min(), xAxis.max(), yAxis.min(), yAxis.max()])
 plt.show()
