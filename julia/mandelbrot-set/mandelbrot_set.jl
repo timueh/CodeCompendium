@@ -45,4 +45,4 @@ for (x, y) in Iterators.product(xAxis, yAxis)
 	push!(z, findMandelbrotColor(MyComplex(x, y)))
 end
 
-heatmap(xAxis, yAxis, z, legend=false, xaxis=false, yaxis=false)
+heatmap(xAxis, yAxis, z, legend=false, xaxis=true, yaxis=true)
