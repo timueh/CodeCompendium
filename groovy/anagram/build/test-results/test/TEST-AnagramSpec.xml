@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="AnagramSpec" tests="14" skipped="0" failures="0" errors="0" timestamp="2021-02-24T21:29:13" hostname="Tillmanns-Air" time="0.232">
+  <properties/>
+  <testcase name="No matches" classname="AnagramSpec" time="0.158"/>
+  <testcase name="Detects two anagrams" classname="AnagramSpec" time="0.003"/>
+  <testcase name="Does not detect anagram subsets" classname="AnagramSpec" time="0.002"/>
+  <testcase name="Detects anagram" classname="AnagramSpec" time="0.001"/>
+  <testcase name="Detects three anagrams" classname="AnagramSpec" time="0.004"/>
+  <testcase name="Detects multiple anagrams with different case" classname="AnagramSpec" time="0.002"/>
+  <testcase name="Does not detect non-anagrams with identical checksum" classname="AnagramSpec" time="0.001"/>
+  <testcase name="Detects anagrams case-insensitively" classname="AnagramSpec" time="0.003"/>
+  <testcase name="Detects anagrams using case-insensitive subject" classname="AnagramSpec" time="0.003"/>
+  <testcase name="Detects anagrams using case-insensitive possible matches" classname="AnagramSpec" time="0.002"/>
+  <testcase name="Does not detect an anagram if the original word is repeated" classname="AnagramSpec" time="0.001"/>
+  <testcase name="Anagrams must use all letters exactly once" classname="AnagramSpec" time="0.004"/>
+  <testcase name="Words are not anagrams of themselves (case-insensitive)" classname="AnagramSpec" time="0.009"/>
+  <testcase name="Words other than themselves can be anagrams" classname="AnagramSpec" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
