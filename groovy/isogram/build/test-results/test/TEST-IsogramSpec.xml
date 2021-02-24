@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="IsogramSpec" tests="13" skipped="0" failures="0" errors="0" timestamp="2021-02-24T20:43:58" hostname="Tillmanns-Air" time="0.18">
+  <properties/>
+  <testcase name="Empty string" classname="IsogramSpec" time="0.145"/>
+  <testcase name="Isogram with only lower case characters" classname="IsogramSpec" time="0.002"/>
+  <testcase name="Word with one duplicated character" classname="IsogramSpec" time="0.001"/>
+  <testcase name="Word with one duplicated character from the end of the alphabet" classname="IsogramSpec" time="0.0"/>
+  <testcase name="Longest reported english isogram" classname="IsogramSpec" time="0.001"/>
+  <testcase name="Word with duplicated character in mixed case" classname="IsogramSpec" time="0.002"/>
+  <testcase name="Word with duplicated character in mixed case, lowercase first" classname="IsogramSpec" time="0.001"/>
+  <testcase name="Hypothetical isogrammic word with hyphen" classname="IsogramSpec" time="0.002"/>
+  <testcase name="Hypothetical word with duplicated character following hyphen" classname="IsogramSpec" time="0.001"/>
+  <testcase name="Isogram with duplicated hyphen" classname="IsogramSpec" time="0.001"/>
+  <testcase name="Made-up name that is an isogram" classname="IsogramSpec" time="0.0"/>
+  <testcase name="Duplicated character in the middle" classname="IsogramSpec" time="0.003"/>
+  <testcase name="Same first and last characters" classname="IsogramSpec" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
